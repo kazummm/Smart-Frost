@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SMART-FROST — Monitoring Rantai Dingin Perikanan Pangkep</title>
+<meta name="description" content="SMART-FROST: sistem monitoring rantai dingin dan ketertelusuran hasil perikanan antarpulau di Kabupaten Pangkep. Prototipe dengan data simulasi.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#001f3f;font-family:'Outfit',system-ui,sans-serif}
+a{color:#22d3ee}a:hover{color:#a5f3fc}
+</style>
+</head>
+<body>
+<div style="background: #001f3f; color: #e8f4fd; font-family: 'Outfit', system-ui, sans-serif; box-sizing: border-box">
+
+<header style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; padding: 20px clamp(20px, 5vw, 64px); border-bottom: 1px solid rgba(6,182,212,0.25)">
+<div style="font-size: 22px; font-weight: 700; letter-spacing: 0.02em">SMART-FROST</div>
+<nav aria-label="Navigasi halaman" style="display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 16px; font-weight: 500">
+<a href="#masalah" style="text-decoration: none; padding: 10px 0">Masalah</a>
+<a href="#cara-kerja" style="text-decoration: none; padding: 10px 0">Cara Kerja</a>
+<a href="#frostscore" style="text-decoration: none; padding: 10px 0">FrostScore</a>
+<a href="#peran" style="text-decoration: none; padding: 10px 0">Pengguna</a>
+<a href="#status" style="text-decoration: none; padding: 10px 0">Status</a>
+<a href="#kontak" style="text-decoration: none; padding: 10px 0">Kontak</a>
+</nav>
+</header>
+
+<section style="display: flex; flex-wrap: wrap; align-items: center; gap: 48px; padding: clamp(40px, 8vw, 96px) clamp(20px, 5vw, 64px)">
+<div style="flex: 1 1 480px; min-width: 0; display: flex; flex-direction: column; gap: 24px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #22d3ee; letter-spacing: 0.04em">PROTOTIPE · GEMASTIK XIX 2026 · KOTA CERDAS</div>
+<h1 style="margin: 0; font-size: clamp(36px, 5.2vw, 64px); line-height: 1.08; font-weight: 700">Pantau Suhu, Jaga Mutu, Telusuri Perjalanan.</h1>
+<p style="margin: 0; font-size: 20px; line-height: 1.55; color: #c7e0f4; max-width: 640px">SMART-FROST adalah sistem monitoring rantai dingin hasil perikanan antarpulau di Kabupaten Pangkep. Perangkat IoT di cool box merekam suhu dan lokasi, aplikasi memberi peringatan dini, dan setiap batch dapat ditelusuri lewat QR.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #93c1e0; max-width: 640px">An IoT cold-chain monitoring and traceability system for inter-island fish shipments in Pangkep, Indonesia. Currently a prototype that runs on simulated data.</p>
+<div style="display: flex; flex-wrap: wrap; gap: 12px; padding-top: 8px">
+<a href="#cara-kerja" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 10px; background: #06b6d4; color: #061220; font-size: 17px; font-weight: 700; text-decoration: none">Lihat cara kerja</a>
+<a href="#kontak" style="display: inline-flex; align-items: center; min-height: 52px; padding: 0 28px; border-radius: 10px; border: 1px solid rgba(6,182,212,0.6); color: #e8f4fd; font-size: 17px; font-weight: 600; text-decoration: none">Hubungi tim</a>
+</div>
+</div>
+
+<div style="flex: 1 1 340px; min-width: 0; max-width: 480px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px">
+<div style="font-size: 14px; font-weight: 500; color: #93c1e0">Batas suhu yang dipantau</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 10px; background: rgba(34,197,94,0.12); border: 1px solid rgba(34,197,94,0.4)">
+<span style="font-size: 18px; font-weight: 700; color: #4ade80">AMAN</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; color: #e8f4fd">0 – 4°C</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 10px; background: rgba(245,158,11,0.12); border: 1px solid rgba(245,158,11,0.45)">
+<span style="font-size: 18px; font-weight: 700; color: #fbbf24">WASPADA</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; color: #e8f4fd">&gt; 4 – 6°C</span>
+</div>
+<div style="display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 16px; border-radius: 10px; background: rgba(239,68,68,0.14); border: 1px solid rgba(239,68,68,0.5)">
+<span style="font-size: 18px; font-weight: 700; color: #f87171">RISIKO</span>
+<span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600; color: #e8f4fd">&gt; 6°C</span>
+</div>
+<p style="margin: 0; font-size: 14px; line-height: 1.5; color: #93c1e0">Status selalu ditampilkan dengan warna dan teks, sehingga nelayan tidak perlu membaca grafik.</p>
+</div>
+</section>
+
+<section id="masalah" style="padding: 64px clamp(20px, 5vw, 64px); background: #0a1e38; display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">Masalah yang dijawab</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #c7e0f4">Distribusi ikan antarpulau di Pangkep bergantung pada es dan cool box yang sulit dipantau selama perjalanan.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 240px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600">Terlambat diketahui</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Penyimpangan suhu baru terlihat setelah ikan tiba, saat mutu sudah turun.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600">Riwayat tersebar</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Catatan distribusi ada di banyak pihak dan tidak terdokumentasi, sehingga sulit ditelusuri saat ada komplain.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600">Data pengawasan minim</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Pemerintah daerah kekurangan data operasional rantai dingin untuk pengawasan dan evaluasi infrastruktur.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 24px; display: flex; flex-direction: column; gap: 8px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600">Sinyal laut tidak stabil</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Solusi yang selalu butuh internet tidak cocok untuk pelayaran antarpulau.</p>
+</div>
+</div>
+</section>
+
+<section id="cara-kerja" style="padding: 64px clamp(20px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">Cara kerja</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #c7e0f4">Perangkat sensor di cool box, aplikasi mobile/web, dan analitik bekerja dalam satu alur dari kapal sampai gudang.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; border-top: 3px solid #06b6d4; background: #0a1e38; border-radius: 0 0 12px 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: #22d3ee">01</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Buat QR Batch</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Nelayan mengisi data batch, sistem membuat FrostID dan QR yang ditempel di cool box.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; border-top: 3px solid #06b6d4; background: #0a1e38; border-radius: 0 0 12px 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: #22d3ee">02</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Pantau di perjalanan</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Sensor merekam suhu, lokasi, dan waktu. Tanpa sinyal, data disimpan lokal lalu disinkronkan otomatis.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; border-top: 3px solid #06b6d4; background: #0a1e38; border-radius: 0 0 12px 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: #22d3ee">03</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Peringatan dan tindakan</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Saat suhu naik cepat atau melewati batas, nelayan menerima peringatan dan tindakan yang disarankan, misalnya tambah es.</p>
+</div>
+<div style="flex: 1 1 240px; min-width: 0; display: flex; flex-direction: column; gap: 12px; padding: 24px; border-top: 3px solid #06b6d4; background: #0a1e38; border-radius: 0 0 12px 12px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 15px; font-weight: 600; color: #22d3ee">04</div>
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Terima dan telusuri</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Distributor memindai QR, melihat riwayat perjalanan di FrostTrace, lalu menerima atau menolak batch.</p>
+</div>
+</div>
+</section>
+
+<section id="frostscore" style="padding: 64px clamp(20px, 5vw, 64px); background: #0a1e38; display: flex; flex-wrap: wrap; gap: 48px; align-items: flex-start">
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">FrostScore</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #c7e0f4">Satu skor 0–100 yang merangkum kondisi rantai dingin selama perjalanan, dihitung dari kestabilan suhu, durasi di luar batas, lama perjalanan, dan jumlah peringatan.</p>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #93c1e0">Bobot dan subskor adalah nilai awal pilot yang akan dikalibrasi bersama pakar perikanan setelah data lapangan terkumpul.</p>
+</div>
+<div style="flex: 1 1 380px; min-width: 0; display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2)"><span style="font-size: 18px; font-weight: 600; color: #4ade80">Sangat Baik</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600">90 – 100</span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2)"><span style="font-size: 18px; font-weight: 600; color: #60a5fa">Baik</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600">75 – 89</span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2)"><span style="font-size: 18px; font-weight: 600; color: #fbbf24">Waspada</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600">60 – 74</span></div>
+<div style="display: flex; align-items: center; justify-content: space-between; padding: 16px 20px; border-radius: 12px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2)"><span style="font-size: 18px; font-weight: 600; color: #f87171">Risiko</span><span style="font-family: 'JetBrains Mono', monospace; font-size: 16px; font-weight: 600">0 – 59</span></div>
+</div>
+</section>
+
+<section id="peran" style="padding: 64px clamp(20px, 5vw, 64px); display: flex; flex-direction: column; gap: 32px">
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 760px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">Untuk siapa</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #c7e0f4">Tiga peran utama, masing-masing hanya melihat data yang relevan untuknya.</p>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 16px">
+<div style="flex: 1 1 300px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Nelayan / operator</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Tahu kondisi cool box sekarang, tahu harus berbuat apa, dan membuat QR batch. Melihat batch miliknya sendiri.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Distributor / koperasi / TPI</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Memindai QR, menilai mutu, menerima atau menolak batch, dan mengelola stok gudang.</p>
+</div>
+<div style="flex: 1 1 300px; min-width: 0; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px">
+<h3 style="margin: 0; font-size: 22px; font-weight: 600">Pemerintah daerah</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Melihat data agregat, peta titik rawan, dan tren untuk pengawasan. Hanya baca, tanpa identitas pribadi nelayan.</p>
+</div>
+</div>
+<div style="background: #0a1e38; border: 1px solid rgba(6,182,212,0.3); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 10px; max-width: 900px">
+<h3 style="margin: 0; font-size: 20px; font-weight: 600">Peran AI</h3>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Claude API direncanakan untuk merangkum perjalanan pengiriman dan menjelaskan anomali suhu dalam bahasa yang mudah dibaca. Peringatan, perhitungan skor, dan catatan pengiriman tetap diatur oleh logika aplikasi dan data yang terverifikasi.</p>
+</div>
+</section>
+
+<section id="status" style="padding: 64px clamp(20px, 5vw, 64px); background: #0a1e38; display: flex; flex-direction: column; gap: 20px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">Status proyek</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 16px; max-width: 1000px">
+<div style="flex: 1 1 280px; min-width: 0; padding: 24px; border-radius: 16px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #fbbf24">SAAT INI</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Prototipe aplikasi untuk tiga peran dengan data simulasi: monitoring suhu, peringatan, FrostScore, QR batch, FrostTrace, peta dan analitik pemerintah.</p>
+</div>
+<div style="flex: 1 1 280px; min-width: 0; padding: 24px; border-radius: 16px; background: #0a2a4e; border: 1px solid rgba(232,244,253,0.2); display: flex; flex-direction: column; gap: 8px">
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 14px; font-weight: 600; color: #22d3ee">BERIKUTNYA</div>
+<p style="margin: 0; font-size: 16px; line-height: 1.55; color: #c7e0f4">Perangkat sensor di cool box dan pilot satu rute Pangkep–Makassar bersama koperasi/TPI dan Dinas. Belum berjalan.</p>
+</div>
+</div>
+<p style="margin: 0; font-size: 15px; line-height: 1.55; color: #93c1e0; max-width: 1000px">Belum ada integrasi resmi dengan sistem pemerintah. Kinerja model AI belum diukur dan baru ditetapkan setelah data validasi cukup.</p>
+</section>
+
+<section id="kontak" style="padding: 64px clamp(20px, 5vw, 64px); display: flex; flex-direction: column; gap: 16px">
+<h2 style="margin: 0; font-size: 36px; line-height: 1.15; font-weight: 700">Kontak</h2>
+<p style="margin: 0; font-size: 18px; line-height: 1.55; color: #c7e0f4; max-width: 640px">Tim SMART-FROST, Universitas Muslim Indonesia, Makassar. Untuk kolaborasi, pilot, atau pertanyaan:</p>
+<div style="font-family: 'JetBrains Mono', monospace; font-size: 18px; font-weight: 600; color: #22d3ee">[EMAIL TIM]</div>
+</section>
+
+<footer style="padding: 24px clamp(20px, 5vw, 64px) 40px; border-top: 1px solid rgba(6,182,212,0.25); font-size: 14px; color: #93c1e0">Data simulasi prototipe · SMART-FROST · GEMASTIK XIX 2026, Divisi Kota Cerdas</footer>
+
+</div>
+</body>
+</html>
